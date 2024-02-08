@@ -2,9 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
 
+## Prerequisites
+
+Before running the project, make sure you have `json-server` installed globally, which can serve as a fake REST API for testing and prototyping. Install it using npm with the following command:
+
+```bash
+npm install -g json-server
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Running mock backend server
+
+In a separate terminal, start json-server to watch the db.json file at the root of the project:
+
+```bash
+json-server db.json
 
 ## Code scaffolding
 
