@@ -5,16 +5,15 @@ import { HousingLocation } from './housinglocation';
   providedIn: 'root'
 })
 export class HousingService {
-  readonly baseUrl = 'https://angular.dev/assets/tutorials/common';
 
-  url = 'http://localhost:3000/locations'
+  baseUrl = 'http://localhost:3000/locations'
 
   async getAllHousingLocations(): Promise<HousingLocation[]> {
-    const data = await fetch(this.url)
+    const data = await fetch(this.baseUrl)
     return (await data.json()) ?? [];
   }
   async getHousingLocationById(id: number): Promise<HousingLocation | undefined> {
-    const data = await fetch(`${this.url}/${id}`)
+    const data = await fetch(`${this.baseUrl}/${id}`)
     return (await data.json()) ?? {};
   }
 
